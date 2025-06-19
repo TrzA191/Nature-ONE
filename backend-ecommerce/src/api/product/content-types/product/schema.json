@@ -41,7 +41,8 @@
     "origin": {
       "type": "enumeration",
       "enum": [
-        "México"
+        "México",
+        "Monterrey"
       ]
     },
     "isFeatured": {
@@ -51,6 +52,13 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "taste": {
+      "type": "enumeration",
+      "enum": [
+        "Agrio",
+        "Dulce"
+      ]
     }
   }
 }

@@ -1,5 +1,6 @@
 export type ProductType = {
     id: number;
+    taste:string;
     productName: string;
     slug: string;
     description: string;
@@ -11,6 +12,7 @@ export type ProductType = {
     updatedAt: string;
     publishedAt: string;
     documentId: string;
+    length:boolean;
     images: {
         id: number;
         documentId: string;

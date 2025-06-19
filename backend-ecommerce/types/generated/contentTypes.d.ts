@@ -468,11 +468,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
-    origin: Schema.Attribute.Enumeration<['M\u00E9xico']>;
+    origin: Schema.Attribute.Enumeration<['M\u00E9xico', 'Monterrey']>;
     price: Schema.Attribute.Decimal;
     productName: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'productName'>;
+    taste: Schema.Attribute.Enumeration<['Agrio', 'Dulce']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

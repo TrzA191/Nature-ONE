@@ -1,36 +1,30 @@
-import { useGetProductField } from "@/api/getProductField";
-import { RadioGroup } from "@/components/ui/radio-group";
 
-const FilterOrigin = () => {
-    const { result,loading } = useGetProductField();
-    return(
-        <div className="my-5">
-            <p className="mb-3 font-bold">Origen </p>
-            {loading && result === null && (
-                <p>Cargando...</p>
-            )}
-            
-        </div>
-    );
+
+import { useGetProductField } from "@/api/getProductField";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import {  FilterTypes } from "@/types/filters";
+
+type FilterOriginProps = {
+    setFilterOrigin: (origin:string)=> void 
 }
 
-export default FilterOrigin;
-
-/*
-import { useGetProductField } from "@/api/getProductField";
-import { RadioGroup } from "@/components/ui/radio-group";
-
-const FilterOrigin = () => {
-    const { result,loading } = useGetProductField();
+const FilterOrigin = (props:FilterOriginProps) => {
+    const {setFilterOrigin}=props;
+    const { result,loading } : FilterTypes = useGetProductField();
+    console.log(result);
     return(
         <div className="my-5">
             <p className="mb-3 font-bold">Origen </p>
             {loading && result === null && (
                 <p>Cargando...</p>
             )}
-            <RadioGroup>
-                {result !== null && !loading && result.schema.origin.enum.map((origin: string) => (
-                    <div key={origin} className="flex items-center space-x-2"> </div>
+            <RadioGroup onValueChange={(value) => setFilterOrigin(value)}>
+                {result !== null && result.schema.attributes.origin.enum.map((origin: string) => (
+                    <div key={origin} className="flex items-center space-x-2">
+                    <RadioGroupItem value={origin} id={origin}/>
+                    <Label htmlFor={origin} >{origin}</Label>
+                    </div>
                 ))}
             </RadioGroup>
         </div>
@@ -39,4 +33,3 @@ const FilterOrigin = () => {
 
 export default FilterOrigin;
 
-*/
