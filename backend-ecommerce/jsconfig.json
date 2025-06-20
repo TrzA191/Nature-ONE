@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "module": "NodeNext",          // <-- AÑADE ESTA LÍNEA
     "moduleResolution": "nodenext",
     "target": "ES2021",
     "checkJs": true,
