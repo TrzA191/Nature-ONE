@@ -2,7 +2,7 @@ import IconButton from "@/components/icon-button";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { formatPrice } from "@/lib/formatPrice";
 import { ProductType } from "@/types/product";
-import { AlertTriangle, Expand, ShoppingCart } from "lucide-react";
+import {  Expand, ShoppingCart } from "lucide-react";
 import  Link  from "next/link";
 import { useRouter } from "next/navigation";
 

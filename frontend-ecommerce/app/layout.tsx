@@ -29,14 +29,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange>
           <NextTopLoader
-            color="#2299DD"
+            color="#6B8E23"
             initialPosition={0.08}
             crawlSpeed={200}
             height={3}
@@ -44,7 +44,7 @@ export default function RootLayout({
             showSpinner={true}
             easing="ease"
             speed={200}
-            shadow="0 0 10px #2299DD, 0 0 5px #2299DD"
+            shadow="0 0 10px #6B8E23, 0 0 5px #6B8E23"
           />
           <Navbar />
           {children}

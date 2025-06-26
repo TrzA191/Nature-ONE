@@ -14,7 +14,7 @@ const Navbar = () => {
   const lovedItems = useLovedProducts((state) => state.lovedItems);
   return (
     <div className="flex items-center justify-between p-4 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
-      <h1 className="text-3xl" onClick={() => router.push("/")}>Nature
+      <h1 className="text-3xl text-primary" onClick={() => router.push("/")}>Nature
         <span className="font-bold">ONE</span>
       </h1>
       <div className="items-center justify-between hidden sm:flex">

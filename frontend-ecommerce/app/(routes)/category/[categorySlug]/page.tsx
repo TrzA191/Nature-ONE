@@ -3,9 +3,8 @@
 import { useGetCategoryProduct } from "@/api/getCategoryProduct";
 import { Separator } from "@/components/ui/separator";
 import { ResponseType } from "@/types/response";
-import { useParams , useRouter} from "next/navigation";
+import { useParams } from "next/navigation";
 import FiltersControlsCategory from "./components/filters-controls-category";
-import { Skeleton } from "@/components/ui/skeleton";
 import SkeletonSchema from "@/components/skeletonSchema";
 import ProductCard from "./components/product-card";
 import { ProductType } from "@/types/product";
@@ -23,7 +22,7 @@ export default function Page() {
             : ""
     );
     const [filterOrigin, setFilterOrigin] = useState('')
-    const router = useRouter();
+    //const router = useRouter();
     
     const filteredProducts = result !== null && !loading &&(
         filterOrigin == '' ? result:result.filter((product: ProductType) => product.origin == filterOrigin)

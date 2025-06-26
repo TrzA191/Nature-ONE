@@ -40,12 +40,12 @@ const ChooseCategory = () => {
                                 <Link
                                     key={category.id}
                                     href={`/category/${category.slug}`}
-                                    className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover flex-shrink-0 w-1/3"
+                                    className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover flex-shrink-0 w-[31.5%]"
                                 >
                                     <img 
                                         src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${category.mainImage.url}`}
                                         alt={category.categoryName} 
-                                        className='max-w-[270px] transition duration-300 ease-in-out rounded-2xl hover:scale-110'
+                                        className='w-full h-full object-cover transition duration-300 ease-in-out rounded-2xl hover:scale-110'
                                     />
                                     <p className='absolute w-full py-2 text-lg font-bold text-center text-white bottom-5 backdrop-blur-lg'>{category.categoryName}</p>
                                 </Link>
